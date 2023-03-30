@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DetailPage</title>
+    <link rel="stylesheet" href="styledetail.css">
+    <link rel="stylesheet" href="animations.css">
+  </head>
+  <body>
+    <section class="appinfo">
+            <div class="header">
+                <img src="Assets/mebl.png" alt="logoappli" class="logo">
+                <div class="app-infos">
+                    <h1></h1>
+                    <h2></h2>
+                    <ul class="liste-horizontale">
+                    </ul>
+                </div>
+            </div>
+        <p class="description">
+        </p>
+    </section>
+    <section class="mockups">
+        <div class="mockups-grid">
+            <div class="mockup-item">
+                <img src="" alt="mockup">
+                <div class="pagename-container">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Ajoutez cette ligne avant la fermeture de la balise </body> dans Detail.html -->
+<script src="detail.js"></script>
+<script src="scriptsgrid.js"></script>
+<script>
+  // JavaScript pour ajouter les classes "show" aux sections "mockups" et "appinfo" lors du chargement de la page
+  document.addEventListener("DOMContentLoaded", function(event) {
+    var mockups = document.querySelector(".mockups");
+    var appinfo = document.querySelector(".appinfo");
+
+    mockups.classList.add("show");
+    appinfo.classList.add("show");
+  });
+</script>
+  </body>
+</html>

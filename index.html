@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ma page</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="animations.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="app.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+  </head>
+  <body>
+    <nav>
+      <div class="logot">
+        <img src="Assets/logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#projects">Les projets</a></li>
+        <li><a href="#">À propos</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+      <div class="contact-btn">
+        <a href="#" class="btn">Nous contacter</a>
+      </div>
+    </nav>
+    <section class="main">
+      <div class="presentation">
+        <h1>Embarquez pour une aventure numérique sur mesure</h1>
+        <p>Ensemble, donnons vie à l'application mobile qui propulsera votre projet vers de nouveaux sommets !</p>
+        <div class="buttons-container">
+          <svg class="liquid-button" data-text="Découvrir les projets"></svg>
+        </div>
+        <button class="seeprojects">Découvrir les projets</button>
+      </div>      
+      <div class="project-types">
+        <div class="purple-circle"></div>
+        <div class="orange-circle"></div>
+        <p class="All">Tous les projets d’applications mobiles :</p> 
+        <p class="move"> </p>
+      </div>
+    </section>
+    <section id="projects" class="projects">
+      <h3>Les projets</h3>
+      <div class="grid">
+      </div>
+    </section>
+    <section class="AboutUs">
+      <h3>Qui sommes nous ?</h3>
+      <div class ="LeoInformations">
+        <img src="Assets/leo.png" alt="me">
+      <div class="LeoInfos">
+        <h2>Léo Chanvin</h2>
+        <p>Développeur IOS / Android</p>
+        <p>UI / UX Designer</p>
+      </div>
+      </div>
+      <p class="myself">Passionné de développement mobile et de design UI/UX, depuis maintenant 6 ans, je design et développe des applications mobiles IOS et Android de tous types, en utilisant Flutter pour donner vie à des idées innovantes et les transformer en expériences utilisateur exceptionnelles.<br><br>
+
+        J’accorde une attention particulière à chaque projet sur lequel je travaille et je mets toujours un point d'honneur à comprendre les besoins de mes clients pour leur offrir des solutions adaptées et sur-mesure.<br><br>
+        
+        Au fil des ans, j'ai développé une solide expertise et un large éventail de compétences qui me permettent de mener à bien des projets variés. Que vous ayez besoin d'une application simple et épurée, riche en fonctionnalités ou d'un design entièrement personnalisé, je suis là pour vous aider à concrétiser vos idées et à les transformer en réalité.<br><br>
+        
+        Parcourez mon portfolio pour découvrir les projets sur lesquels j'ai travaillé et pour vous faire une idée de ce que je peux vous offrir.</p>
+    </section>
+    <section class="ContactUs">
+      <h3>Nous contacter</h3>
+      <div class="white-line"></div>
+      <form class="ContactForm">
+        <div class="row">
+          <div class="col">
+            <input type="text" id="nom-prenom" name="nom-prenom" placeholder="Nom et Prénom">
+          </div>
+          <div class="col">
+            <input type="text" id="email" name="email" placeholder="Adresse mail">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <textarea id="projet" name="projet" placeholder="Décrivez votre projet"></textarea>
+          </div>
+        </div>
+        <input type="submit" value="Envoyer">
+      </form>    
+    </section>
+    <script src="liquid.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('a[href^="#"]').on('click', function(event) {
+          event.preventDefault();
+    
+          var target = $(this.getAttribute('href'));
+          if (target.length) {
+            $('html, body').stop().animate({
+              scrollTop: target.offset().top
+            }, 800, 'easeOutQuad');
+          }
+        });
+      });
+    </script>
+    <script src="scriptsgrid.js"></script>
+    <script src="transition.js"></script>
+    <script src="animation.js"></script>
+  </body>
+</html>

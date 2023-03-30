@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+@font-face {
+    font-family: 'Monaco';
+    src: url('chemin/vers/votre/fichier-de-police/monaco.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+  /*General*/
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0A192F;
+    font-family: 'Poppins', sans-serif;
+  }
+
+h1 {
+    color: white;
+    font-size: 35px;
+    font-weight: 500;
+    margin: 0;
+}
+
+h2 {
+    color: rgba(255, 255, 255, 0.764);
+    font-size: 20px;
+    font-weight: 400;
+    margin: 0;
+}
+  
+/*Header + Description*/
+
+.appinfo {
+    height: 50%;
+    width: calc(100% - 16vw);
+    margin-left: 8vw;
+    margin-right: 8vw;
+    margin-top: 8vh;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.appinfo.show {
+    opacity: 1;
+  }
+
+/*Header*/
+
+.header {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    height: 130px;
+    border-radius: 23px;
+}
+
+.app-infos {
+    margin-left: 20px;
+}
+
+
+/*Liste des compétences*/
+
+.liste-horizontale {
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.liste-horizontale li {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 15px;
+    background-color: #ecb6ff41;
+    border-radius: 7px;
+    margin-right: 10px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 8px;
+}
+
+
+.icon {
+    margin-right: 5px;
+    width: 16px;
+    height: 16px;
+}
+
+.icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.mot {
+    white-space: nowrap;
+}
+
+/*Description*/
+
+.description {
+    width: 100%;
+    text-align: justify;
+    color: rgba(255, 255, 255, 0.651);
+    font-size: 18px;
+    font-family: 'Raleway', sans-serif;
+    margin-top: 30px;
+}
+
+/*Mockups*/
+
+.mockups {
+    width: 100%;
+    margin-top: 80px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+
+.mockups.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.mockups-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 50px;
+    margin-left: 8vw;
+    margin-right: 8vw;
+    padding-bottom: 50px;
+}
+
+.mockup-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.mockup-item img {
+    width: auto;
+    height: 70vh;
+    margin-bottom: 10px;
+}
+
+.pagename-container {
+    background-color: #ecb6ff41;
+    border-radius: 5px;
+}
+
+.mockup-item p {
+    color: white;
+    font-size: 18px;
+    padding: 7px 16px;
+}
+
+/*Media Queries*/
+/*Phone screen*/
+
+@media screen and (max-width: 900px) {
+    .appinfo {
+        height: 50%;
+        width: calc(100% - 8vw);
+        margin-left: 4vw;
+        margin-right: 4vw;
+        margin-top: 4vh;
+    }
+    
+    /*Header*/
+    
+    .logo {
+        height: 100px;
+        border-radius: 20px;
+    }
+    
+    .app-infos {
+        margin-left: 20px;
+    }
+
+    h1 {
+        font-size: 27px;
+    }
+    
+    h2 {
+        font-size: 16px;
+    }
+
+    /*Description*/
+
+    .description {
+        font-size: 15px;
+    }
+
+    /*Mockups*/
+
+    .mockups {
+        margin-top: 50px;
+    }
+
+    .mockups-grid {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+    }
+
+
+    .mockup-item img {
+        height: 60vh;
+        margin-bottom: 10px;
+    } 
+
+}
